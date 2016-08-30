@@ -13,5 +13,8 @@
 //解析 梦的类型
 +(NSMutableArray*)parseDreamsTypeWithDic:(NSDictionary *)dict;
 
+//根据梦中的事物  解 梦的详情
++(NSMutableArray*)parseDreamDetailInfoWithDic:(NSDictionary *)dict;
+
 
 @end

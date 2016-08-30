@@ -110,9 +110,9 @@
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
             NSLog(@"根据梦境事物解析梦:%@",dict);
             //调用解析类来解析数据模型
-            //NSMutableArray *resultArr = [HYRParse parseDreamsTypeWithDic:dict];
+            NSMutableArray *resultArr = [HYRParse parseDreamDetailInfoWithDic:dict];
             //把转成功的字典 返回出去
-            //success(resultArr);
+            success(resultArr);
             
         }else{
             success(@{@"msg": @"暂无数据~"});
