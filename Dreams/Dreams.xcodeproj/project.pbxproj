@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		723854A58C20898C9892673B /* libPods-Dreams.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8527901C00D60142688A21E /* libPods-Dreams.a */; };
 		8519592D1D74218A00B9F56A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8519592C1D74218A00B9F56A /* AppDelegate.m */; };
 		851959361D74265600B9F56A /* MainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851959351D74265600B9F56A /* MainCollectionViewController.m */; };
 		851959391D74268400B9F56A /* DreamCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 851959381D74268400B9F56A /* DreamCollectionViewCell.m */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41F840468E5D21D880CE9F39 /* Pods-Dreams.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreams.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dreams/Pods-Dreams.release.xcconfig"; sourceTree = "<group>"; };
 		8519592B1D74218A00B9F56A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8519592C1D74218A00B9F56A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		851959341D74265600B9F56A /* MainCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewController.h; sourceTree = "<group>"; };
@@ -63,6 +65,8 @@
 		85973CD61D6D49DE00DC74E7 /* DreamsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85973CDA1D6D49DE00DC74E7 /* DreamsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamsUITests.m; sourceTree = "<group>"; };
 		85973CDC1D6D49DE00DC74E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D210050C36A65F51C5702723 /* Pods-Dreams.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreams.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dreams/Pods-Dreams.debug.xcconfig"; sourceTree = "<group>"; };
+		F8527901C00D60142688A21E /* libPods-Dreams.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dreams.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				723854A58C20898C9892673B /* libPods-Dreams.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84E9AFF3131D6D133C330DE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8527901C00D60142688A21E /* libPods-Dreams.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		851959231D74206B00B9F56A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +211,8 @@
 				85973CCE1D6D49DD00DC74E7 /* DreamsTests */,
 				85973CD91D6D49DE00DC74E7 /* DreamsUITests */,
 				85973CB31D6D49DD00DC74E7 /* Products */,
+				B6E57306E78A9815300C7C01 /* Pods */,
+				84E9AFF3131D6D133C330DE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -248,6 +263,15 @@
 			path = DreamsUITests;
 			sourceTree = "<group>";
 		};
+		B6E57306E78A9815300C7C01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D210050C36A65F51C5702723 /* Pods-Dreams.debug.xcconfig */,
+				41F840468E5D21D880CE9F39 /* Pods-Dreams.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,9 +279,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85973CDF1D6D49DE00DC74E7 /* Build configuration list for PBXNativeTarget "Dreams" */;
 			buildPhases = (
+				BDE8D8DB2903335D83427379 /* [CP] Check Pods Manifest.lock */,
 				85973CAE1D6D49DD00DC74E7 /* Sources */,
 				85973CAF1D6D49DD00DC74E7 /* Frameworks */,
 				85973CB01D6D49DD00DC74E7 /* Resources */,
+				90DD83F8D8967D0F8AF58BCE /* [CP] Embed Pods Frameworks */,
+				693DACE80F5C4F545ED30558 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,6 +399,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		693DACE80F5C4F545ED30558 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dreams/Pods-Dreams-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90DD83F8D8967D0F8AF58BCE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dreams/Pods-Dreams-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDE8D8DB2903335D83427379 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		85973CAE1D6D49DD00DC74E7 /* Sources */ = {
@@ -525,6 +600,7 @@
 		};
 		85973CE01D6D49DE00DC74E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D210050C36A65F51C5702723 /* Pods-Dreams.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Dreams/Info.plist;
@@ -536,6 +612,7 @@
 		};
 		85973CE11D6D49DE00DC74E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41F840468E5D21D880CE9F39 /* Pods-Dreams.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Dreams/Info.plist;
