@@ -13,6 +13,8 @@
 
 //请求梦境类型
 +(void)requestDreamTypeSuccess:(MyCallBack)success andFail:(MyCallBack)fail{
+    //路径
+    NSString *urlString = [NSString stringWithFormat:@""];
     
 }
 

@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  Dreams
+//
+//  Created by aiqiyisheng on 16/8/30.
+//  Copyright © 2016年 黄永锐. All rights reserved.
+//http://www.cnblogs.com/Ruby_c/p/5644918.html
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+/**
+ pch文件的作用：
+ 1、存放一些全局的宏(整个项目中都用得上的宏)
+ 2、用来包含一些全部的头文件(整个项目中都用得上的头文件)
+ 3、能自动打开或者关闭日志输出功能
+ */
+
+//宏定义
+#define kAppKey @"833b9381308331e366e69cc31ea1e7b3"
+#define kHostUrl @"http://v.juhe.cn/dream/"
+
+//屏幕的大小尺寸
+#define kWidth [UIScreen mainScreen].bounds.size.width
+#define kHeight [UIScreen mainScreen].bounds.size.height
+
+
+#endif /* PrefixHeader_pch */
