@@ -7,7 +7,8 @@
 //
 
 #import "SearchViewController.h"
-#import "HttpTools.h"
+#import "DisplayDreamInfoTableViewController.h"
+
 
 
 @interface SearchViewController ()
@@ -28,23 +29,27 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    UINavigationController *navi = segue.destinationViewController;
+//    DisplayDreamInfoTableViewController *dreamInfoTVC = (DisplayDreamInfoTableViewController*)navi.topViewController;
+//    dreamInfoTVC.searchText = _searchTF.text;
+//    dreamInfoTVC.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+//   
+//
+//}
+
 
 - (IBAction)SearchDream:(UIButton *)sender {
     
-    [HttpTools requestDreamDetailInfoWithSomething:self.searchTF.text andSuccess:^(id obj) {
-        //
-    } andFail:^(id obj) {
-        //
-    }];
+    DisplayDreamInfoTableViewController *dreamInfoTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DisplayDreamInfoTVC"];
+    dreamInfoTVC.searchText = _searchTF.text;
+    dreamInfoTVC.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    
+    [self presentViewController:dreamInfoTVC animated:YES completion:nil];
     
 }
 @end

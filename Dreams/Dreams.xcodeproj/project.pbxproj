@@ -23,6 +23,7 @@
 		85D1FC951D7593F700FB9A4F /* HYRParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D1FC941D7593F700FB9A4F /* HYRParse.m */; };
 		868955C51D75E23200A3CF3D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955C41D75E23200A3CF3D /* SearchViewController.m */; };
 		868955C81D75E8C900A3CF3D /* DreamInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955C71D75E8C900A3CF3D /* DreamInfo.m */; };
+		868955CB1D75F0AC00A3CF3D /* DisplayDreamInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955CA1D75F0AC00A3CF3D /* DisplayDreamInfoTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		868955C41D75E23200A3CF3D /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		868955C61D75E8C900A3CF3D /* DreamInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamInfo.h; sourceTree = "<group>"; };
 		868955C71D75E8C900A3CF3D /* DreamInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamInfo.m; sourceTree = "<group>"; };
+		868955C91D75F0AC00A3CF3D /* DisplayDreamInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayDreamInfoTableViewController.h; sourceTree = "<group>"; };
+		868955CA1D75F0AC00A3CF3D /* DisplayDreamInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayDreamInfoTableViewController.m; sourceTree = "<group>"; };
 		D210050C36A65F51C5702723 /* Pods-Dreams.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreams.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dreams/Pods-Dreams.debug.xcconfig"; sourceTree = "<group>"; };
 		F8527901C00D60142688A21E /* libPods-Dreams.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dreams.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -196,6 +199,8 @@
 				851959351D74265600B9F56A /* MainCollectionViewController.m */,
 				868955C31D75E23200A3CF3D /* SearchViewController.h */,
 				868955C41D75E23200A3CF3D /* SearchViewController.m */,
+				868955C91D75F0AC00A3CF3D /* DisplayDreamInfoTableViewController.h */,
+				868955CA1D75F0AC00A3CF3D /* DisplayDreamInfoTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 				868955C51D75E23200A3CF3D /* SearchViewController.m in Sources */,
 				868955C81D75E8C900A3CF3D /* DreamInfo.m in Sources */,
 				85973CB71D6D49DD00DC74E7 /* main.m in Sources */,
+				868955CB1D75F0AC00A3CF3D /* DisplayDreamInfoTableViewController.m in Sources */,
 				851959871D7563C000B9F56A /* HttpTools.m in Sources */,
 				8519593F1D74288200B9F56A /* DreamType.m in Sources */,
 				851959841D75601000B9F56A /* DreamFlowLayout.m in Sources */,

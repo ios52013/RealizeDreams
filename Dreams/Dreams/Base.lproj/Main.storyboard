@@ -111,6 +111,35 @@
             </objects>
             <point key="canvasLocation" x="1577" y="-487"/>
         </scene>
+        <!--Display Dream Info Table View Controller-->
+        <scene sceneID="bm2-Sv-yru">
+            <objects>
+                <tableViewController storyboardIdentifier="DisplayDreamInfoTVC" id="k2r-gF-PHG" customClass="DisplayDreamInfoTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xdF-jl-icF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KOG-6A-EPx">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KOG-6A-EPx" id="tVj-5A-mNn">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k2r-gF-PHG" id="iyd-Jq-yVa"/>
+                            <outlet property="delegate" destination="k2r-gF-PHG" id="4IW-yw-Vdh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="b9X-wF-DbG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HyH-Z5-OLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2390" y="-523"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="kO9-wN-fft">
             <objects>
