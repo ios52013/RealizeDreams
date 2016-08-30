@@ -8,20 +8,40 @@
 
 #import "MainCollectionViewController.h"
 #import "DreamCollectionViewCell.h"
+#import "HttpTools.h"
 
 
 @interface MainCollectionViewController ()
 
+@property(nonatomic, strong)NSMutableArray *dreamsTypeArray;
+
 @end
+
+
 
 @implementation MainCollectionViewController
 
 static NSString * const reuseIdentifier = @"Cell";
 
+
+-(void)initData{
+    [HttpTools requestDreamTypeSuccess:^(id obj) {
+        //
+        _dreamsTypeArray = obj;
+        
+    } andFail:^(id obj) {
+        //
+    }];
+    
+    
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    //初始化数据  请求数据
+    [self initData];
     
     // Register cell classes
     [self.collectionView registerClass:[DreamCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
@@ -52,13 +72,13 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return 10;
+    return _dreamsTypeArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DreamCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    
+    cell.dreamType = _dreamsTypeArray[indexPath.row];
     
     return cell;
 }

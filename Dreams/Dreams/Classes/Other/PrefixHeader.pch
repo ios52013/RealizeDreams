@@ -4,7 +4,8 @@
 //
 //  Created by aiqiyisheng on 16/8/30.
 //  Copyright © 2016年 黄永锐. All rights reserved.
-//http://www.cnblogs.com/Ruby_c/p/5644918.html
+
+//创建配置phc文件的资料 http://www.cnblogs.com/Ruby_c/p/5644918.html
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
@@ -17,6 +18,7 @@
  */
 
 //宏定义
+#define kTimeOutInterval 10.0
 #define kAppKey @"833b9381308331e366e69cc31ea1e7b3"
 #define kHostUrl @"http://v.juhe.cn/dream/"
 
