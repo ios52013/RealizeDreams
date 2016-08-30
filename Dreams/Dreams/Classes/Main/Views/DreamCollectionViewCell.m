@@ -39,14 +39,14 @@
 
 //创建界面
 -(void)createUI{
-    
+    self.backgroundColor = [UIColor magentaColor];
     //
-    self.layer.borderWidth = 1;
+    self.layer.borderWidth = 2;
     self.layer.borderColor = [UIColor whiteColor].CGColor;
     //
     _typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, self.frame.size.height - 55, self.frame.size.width-10, 50)];
     _typeLabel.textAlignment = NSTextAlignmentCenter;
-    _typeLabel.font = [UIFont systemFontOfSize:20];
+    _typeLabel.font = [UIFont systemFontOfSize:28];
     _typeLabel.backgroundColor = [UIColor lightGrayColor];
     
     [self.contentView addSubview:_typeLabel];

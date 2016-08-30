@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="V2b-mP-2Vv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q00-sj-qXt">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Main Collection View Controller-->
+        <!--梦的类型-->
         <scene sceneID="9YE-Uu-dLd">
             <objects>
                 <collectionViewController id="V2b-mP-2Vv" customClass="MainCollectionViewController" sceneMemberID="viewController">
@@ -15,7 +16,7 @@
                         <collectionViewLayout key="collectionViewLayout" id="jsx-Cb-VLd" customClass="DreamFlowLayout"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CqV-Gg-ITd" customClass="DreamCollectionViewCell">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -29,11 +30,102 @@
                             <outlet property="delegate" destination="V2b-mP-2Vv" id="SYL-4n-Cm8"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="梦的类型" id="PN5-bx-khZ">
+                        <barButtonItem key="rightBarButtonItem" title="搜索" id="QtZ-Yo-UQ1">
+                            <connections>
+                                <segue destination="cVR-Yb-d4U" kind="show" id="VXB-XV-svm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="wck-2Z-mBQ" id="yEU-fQ-Alp"/>
+                        <outlet property="searchDisplayController" destination="OUY-Ka-czK" id="9l9-ub-zfO"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5f5-Hf-3it" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="OUY-Ka-czK">
+                    <connections>
+                        <outlet property="delegate" destination="V2b-mP-2Vv" id="V71-nc-BXE"/>
+                        <outlet property="searchContentsController" destination="V2b-mP-2Vv" id="Vf2-ft-z36"/>
+                        <outlet property="searchResultsDataSource" destination="V2b-mP-2Vv" id="Ozw-2I-TmX"/>
+                        <outlet property="searchResultsDelegate" destination="V2b-mP-2Vv" id="oxu-oS-AfC"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="814" y="-231"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="C3g-6K-CR7">
+            <objects>
+                <viewController id="cVR-Yb-d4U" customClass="SearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t2p-hm-Ngf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ccg-xM-SIP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cw8-xy-vyg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oJA-p7-a5T">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBy-bf-TDD">
+                                <rect key="frame" x="490" y="164" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="623-fY-TAZ"/>
+                                    <constraint firstAttribute="width" constant="60" id="c0C-CB-FjW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="搜索"/>
+                                <connections>
+                                    <action selector="SearchDream:" destination="cVR-Yb-d4U" eventType="touchUpInside" id="4Tm-My-DUH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入你梦到东西..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KVy-Oq-nxy">
+                                <rect key="frame" x="50" y="164" width="410" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LDz-Za-MEg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oJA-p7-a5T" firstAttribute="top" secondItem="t2p-hm-Ngf" secondAttribute="bottom" id="5jG-4M-iHR"/>
+                            <constraint firstItem="sBy-bf-TDD" firstAttribute="top" secondItem="t2p-hm-Ngf" secondAttribute="bottom" constant="100" id="DdZ-1X-F8x"/>
+                            <constraint firstItem="KVy-Oq-nxy" firstAttribute="leading" secondItem="cw8-xy-vyg" secondAttribute="leadingMargin" constant="30" id="Ehz-QN-paB"/>
+                            <constraint firstItem="KVy-Oq-nxy" firstAttribute="top" secondItem="t2p-hm-Ngf" secondAttribute="bottom" constant="100" id="Eyg-vx-TCJ"/>
+                            <constraint firstItem="sBy-bf-TDD" firstAttribute="leading" secondItem="KVy-Oq-nxy" secondAttribute="trailing" constant="30" id="QDJ-ch-tJa"/>
+                            <constraint firstAttribute="trailing" secondItem="oJA-p7-a5T" secondAttribute="trailing" id="apP-MR-IWY"/>
+                            <constraint firstItem="Ccg-xM-SIP" firstAttribute="top" secondItem="oJA-p7-a5T" secondAttribute="bottom" id="b9E-Ml-wBM"/>
+                            <constraint firstItem="oJA-p7-a5T" firstAttribute="leading" secondItem="cw8-xy-vyg" secondAttribute="leading" id="ddY-ha-riJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sBy-bf-TDD" secondAttribute="trailing" constant="30" id="oue-70-vgP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchTF" destination="KVy-Oq-nxy" id="S7W-1I-XvN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SxF-Vh-zZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1577" y="-487"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kO9-wN-fft">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q00-sj-qXt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ess-ZK-BfZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="V2b-mP-2Vv" kind="relationship" relationship="rootViewController" id="D6Z-lO-izS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8p-mG-AvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2" y="-231"/>
         </scene>

@@ -41,6 +41,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //
+    self.collectionView.backgroundColor = [UIColor whiteColor];
     
     //初始化数据  请求数据
     [self initData];

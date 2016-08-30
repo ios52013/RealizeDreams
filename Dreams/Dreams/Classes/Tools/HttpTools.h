@@ -17,5 +17,8 @@ typedef void(^MyCallBack)(id obj);
 //请求梦境类型
 +(void)requestDreamTypeSuccess:(MyCallBack)success andFail:(MyCallBack)fail;
 
+//根据梦境中梦到的事物解梦
++(void)requestDreamDetailInfoWithSomething:(NSString*)something andSuccess:(MyCallBack)success andFail:(MyCallBack)fail;
+
 
 @end

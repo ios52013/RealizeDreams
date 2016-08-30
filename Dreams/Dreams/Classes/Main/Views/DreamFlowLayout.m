@@ -44,12 +44,12 @@
     //如果继承自UICollectionViewLayout，则没有如下属性
     self.itemSize = CGSizeMake(300, 300);
     //行距离
-    self.minimumLineSpacing = 100;
+    self.minimumLineSpacing = 30;
     //每一行里面cell的距离
     self.minimumInteritemSpacing = 10;
     
     //分区间的内边距
-    self.sectionInset = UIEdgeInsetsMake((self.collectionView.frame.size.height-300)/2, (self.collectionView.frame.size.width-300)/2, (self.collectionView.frame.size.height-300)/2, (self.collectionView.frame.size.width-300)/2);
+    self.sectionInset = UIEdgeInsetsMake((self.collectionView.frame.size.height-300)/2, 30, (self.collectionView.frame.size.height-300)/2, (self.collectionView.frame.size.width-300)/2);
     
     //滑动方向  水平滚动
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;

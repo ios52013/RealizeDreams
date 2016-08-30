@@ -81,4 +81,54 @@
     
 }
 
+
+
+//根据梦境中梦到的事物解梦
++(void)requestDreamDetailInfoWithSomething:(NSString*)something andSuccess:(MyCallBack)success andFail:(MyCallBack)fail{
+    
+    
+    //路径
+    NSString *urlString = [NSString stringWithFormat:@"%@query?",kHostUrl];
+    //参数
+    NSDictionary *parames = @{
+                              @"key":kAppKey,
+                              @"q":something
+                              };
+    
+    //创建请求对象
+    AFHTTPSessionManager *manager = [self manager];
+    //发起POST请求
+    [manager POST:urlString parameters:parames progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+        //// 这里可以获取到目前数据请求的进度
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //请求成功
+        
+        if (responseObject) {
+            //把请求回来的json字符串转换成字典
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+            NSLog(@"根据梦境事物解析梦:%@",dict);
+            //调用解析类来解析数据模型
+            //NSMutableArray *resultArr = [HYRParse parseDreamsTypeWithDic:dict];
+            //把转成功的字典 返回出去
+            //success(resultArr);
+            
+        }else{
+            success(@{@"msg": @"暂无数据~"});
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //请求失败
+        NSString *reson = [error localizedDescription];
+        fail(reson);//把请求错误的信息返回出去
+    
+    }];
+    
+    
+
+
+    
+}
+
 @end

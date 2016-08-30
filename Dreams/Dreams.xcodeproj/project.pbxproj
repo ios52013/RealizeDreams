@@ -21,6 +21,7 @@
 		85973CD01D6D49DD00DC74E7 /* DreamsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85973CCF1D6D49DD00DC74E7 /* DreamsTests.m */; };
 		85973CDB1D6D49DE00DC74E7 /* DreamsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85973CDA1D6D49DE00DC74E7 /* DreamsUITests.m */; };
 		85D1FC951D7593F700FB9A4F /* HYRParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D1FC941D7593F700FB9A4F /* HYRParse.m */; };
+		868955C51D75E23200A3CF3D /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 868955C41D75E23200A3CF3D /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		85D1FC921D7587C400FB9A4F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		85D1FC931D7593F700FB9A4F /* HYRParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYRParse.h; sourceTree = "<group>"; };
 		85D1FC941D7593F700FB9A4F /* HYRParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYRParse.m; sourceTree = "<group>"; };
+		868955C31D75E23200A3CF3D /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		868955C41D75E23200A3CF3D /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		D210050C36A65F51C5702723 /* Pods-Dreams.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dreams.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dreams/Pods-Dreams.debug.xcconfig"; sourceTree = "<group>"; };
 		F8527901C00D60142688A21E /* libPods-Dreams.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dreams.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,13 +113,13 @@
 		851959231D74206B00B9F56A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				851959241D74207C00B9F56A /* Main */,
 				8519598A1D75662400B9F56A /* Category */,
 				851959891D75661400B9F56A /* Lib */,
 				851959881D7565FC00B9F56A /* Images */,
 				851959271D7420A100B9F56A /* Tools */,
 				851959261D74209700B9F56A /* DB */,
 				851959251D74208D00B9F56A /* Other */,
-				851959241D74207C00B9F56A /* Main */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -186,6 +189,8 @@
 			children = (
 				851959341D74265600B9F56A /* MainCollectionViewController.h */,
 				851959351D74265600B9F56A /* MainCollectionViewController.m */,
+				868955C31D75E23200A3CF3D /* SearchViewController.h */,
+				868955C41D75E23200A3CF3D /* SearchViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -512,6 +517,7 @@
 				851959361D74265600B9F56A /* MainCollectionViewController.m in Sources */,
 				8519592D1D74218A00B9F56A /* AppDelegate.m in Sources */,
 				85D1FC951D7593F700FB9A4F /* HYRParse.m in Sources */,
+				868955C51D75E23200A3CF3D /* SearchViewController.m in Sources */,
 				85973CB71D6D49DD00DC74E7 /* main.m in Sources */,
 				851959871D7563C000B9F56A /* HttpTools.m in Sources */,
 				8519593F1D74288200B9F56A /* DreamType.m in Sources */,
