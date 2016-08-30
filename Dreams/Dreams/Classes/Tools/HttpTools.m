@@ -10,6 +10,7 @@
 #import "HttpTools.h"
 
 @implementation HttpTools
+
 //请求梦境类型
 +(void)requestDreamTypeSuccess:(MyCallBack)success andFail:(MyCallBack)fail{
     
