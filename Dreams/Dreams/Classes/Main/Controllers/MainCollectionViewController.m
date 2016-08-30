@@ -21,13 +21,13 @@
 
 @implementation MainCollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
-
 
 -(void)initData{
     [HttpTools requestDreamTypeSuccess:^(id obj) {
         //
         _dreamsTypeArray = obj;
+        
+        [self.collectionView reloadData];
         
     } andFail:^(id obj) {
         //
@@ -36,6 +36,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
 }
 
+
+static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -77,6 +79,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DreamCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
     
     cell.dreamType = _dreamsTypeArray[indexPath.row];
     

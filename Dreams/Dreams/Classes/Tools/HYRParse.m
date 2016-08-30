@@ -7,13 +7,35 @@
 //
 
 #import "HYRParse.h"
+#import <MJExtension/MJExtension.h>
+#import "DreamType.h"
 
 @implementation HYRParse
 //解析 梦的类型
 +(NSMutableArray*)parseDreamsTypeWithDic:(NSDictionary *)dict{
     NSMutableArray * array = [NSMutableArray array];
+    NSLog(@"解析-请求梦的类型返回的数据:%@",dict);
+    NSArray *tempArray = dict[@"result"];
+    
+    //判断返回的数据是否为空
+    if ([tempArray isKindOfClass:[NSNull class]]) {
+        return nil;
+    }
+    
+    //由于创建的模型层里面属性 和 后台返回的数据名字不一样
+    [DreamType mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
+        //
+        return @{
+                 //模型层的属性名 : 后台返回的名字
+                 @"typeId": @"id",
+                 @"typeName": @"name"
+                 
+                 };
+    }];
     
     
+    //字典数组 转 模型数组
+    array = [DreamType mj_objectArrayWithKeyValuesArray:tempArray];
     
     return array;
 }

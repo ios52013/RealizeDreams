@@ -9,6 +9,8 @@
 
 #import "HttpTools.h"
 #import <AFNetworking.h>
+#import "HYRParse.h"
+
 
 
 @implementation HttpTools
@@ -61,9 +63,9 @@
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
             
             //调用解析类来解析数据模型
-           // NSMutableArray *resultArr = [HYRParse parseCategoryInfoWithDic:dict];
+            NSMutableArray *resultArr = [HYRParse parseDreamsTypeWithDic:dict];
             //把转成功的字典 返回出去
-            //success(resultArr);
+            success(resultArr);
             
         }else{
             success(@{@"msg": @"暂无数据~"});

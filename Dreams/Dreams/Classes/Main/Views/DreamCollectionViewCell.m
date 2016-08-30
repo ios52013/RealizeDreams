@@ -39,20 +39,23 @@
 
 //创建界面
 -(void)createUI{
+    
     //
     self.layer.borderWidth = 1;
     self.layer.borderColor = [UIColor whiteColor].CGColor;
     //
-    _typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, self.frame.size.height - 30, self.frame.size.width-10, 25)];
-    _typeLabel.text = _dreamType.typeName;
+    _typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, self.frame.size.height - 55, self.frame.size.width-10, 50)];
+    _typeLabel.textAlignment = NSTextAlignmentCenter;
     _typeLabel.font = [UIFont systemFontOfSize:20];
-    _typeLabel.backgroundColor = [UIColor cyanColor];
+    _typeLabel.backgroundColor = [UIColor lightGrayColor];
     
     [self.contentView addSubview:_typeLabel];
 }
 
 -(void)setDreamType:(DreamType *)dreamType{
+    
     _dreamType = dreamType;
+    _typeLabel.text = [NSString stringWithFormat:@"%@: %@",_dreamType.typeId,_dreamType.typeName];
 }
 
 @end
