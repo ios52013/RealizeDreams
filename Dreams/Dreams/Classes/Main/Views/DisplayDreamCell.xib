@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="MC9-RS-Z47" customClass="DisplayDreamCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MC9-RS-Z47" id="zad-0R-gz4">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsP-gz-e8j">
+                        <rect key="frame" x="5" y="5" width="310" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Hha-Me-yIP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.51479366333250998" green="0.35873821727421762" blue="0.96415314226519333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="梦的意义" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALv-lE-gEP">
+                        <rect key="frame" x="5" y="43" width="310" height="49"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="textColor" red="0.96415314226519333" green="0.50319855529066337" blue="0.95602377101294633" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ALv-lE-gEP" secondAttribute="trailing" constant="5" id="8Kl-VF-qeU"/>
+                    <constraint firstItem="ALv-lE-gEP" firstAttribute="leading" secondItem="zad-0R-gz4" secondAttribute="leading" constant="5" id="AaL-83-Zxh"/>
+                    <constraint firstItem="ALv-lE-gEP" firstAttribute="top" secondItem="UsP-gz-e8j" secondAttribute="bottom" constant="10" id="CRo-mm-83n"/>
+                    <constraint firstAttribute="trailing" secondItem="UsP-gz-e8j" secondAttribute="trailing" constant="5" id="IGv-o5-yH6"/>
+                    <constraint firstItem="UsP-gz-e8j" firstAttribute="top" secondItem="zad-0R-gz4" secondAttribute="top" constant="5" id="Kdz-pB-USr"/>
+                    <constraint firstItem="UsP-gz-e8j" firstAttribute="leading" secondItem="zad-0R-gz4" secondAttribute="leading" constant="5" id="Y5H-an-44x"/>
+                    <constraint firstAttribute="bottom" secondItem="ALv-lE-gEP" secondAttribute="bottom" constant="5" id="alK-Yb-QhK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="DreamDesTextView" destination="ALv-lE-gEP" id="ZZT-bE-efQ"/>
+                <outlet property="DreamTitleLabel" destination="UsP-gz-e8j" id="gdU-gD-wYy"/>
+            </connections>
+            <point key="canvasLocation" x="295" y="253"/>
+        </tableViewCell>
+    </objects>
+</document>

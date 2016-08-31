@@ -19,7 +19,7 @@
 
 //宏定义
 #define kTimeOutInterval 10.0
-#define kAppKey @"833b9381308331e366e69cc31ea1e7b3"
+#define kAppKey @"b29b5acaae5c9d168af0f2ada2bd4397"
 #define kHostUrl @"http://v.juhe.cn/dream/"
 
 //屏幕的大小尺寸

@@ -9,6 +9,8 @@
 #import "DisplayDreamInfoTableViewController.h"
 #import "HttpTools.h"
 #import "DreamInfo.h"
+#import "DisplayDreamCell.h"
+
 
 @interface DisplayDreamInfoTableViewController ()
 @property(nonatomic, strong)NSMutableArray *datasourceArr;
@@ -28,8 +30,18 @@
 
 }
 
+static NSString *const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //tableView的可视范围占据整个父控件(或者屏幕)－－设置contentsize滚动范围
+    
+    //所有的cell都可以被看到,也就是说tableView中的cell不会被导航栏,titleView以及TabBar所遮挡－－设置contentInset内边距
+    self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+    
+    //register tableView Cell
+    [self.tableView registerNib:[UINib nibWithNibName:@"DisplayDreamCell" bundle:nil] forCellReuseIdentifier:reuseIdentifier];
+    
     
     //
     [self initData];
@@ -59,21 +71,21 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
-    }
+    DisplayDreamCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    
     //
     DreamInfo *dreamInfo = _datasourceArr[indexPath.row];
-    cell.textLabel.text = dreamInfo.dreamTitle;
-    cell.detailTextLabel.text = dreamInfo.dreamDescripe;
+    cell.DreamTitleLabel.text = dreamInfo.dreamTitle;
+    cell.DreamDesTextView.text = dreamInfo.dreamDescripe;
+    //cell.DreamDesTextView.textColor = [UIColor colorWithRed:0.8 green:0.5 blue:0.6 alpha:1];
+    
     
     return cell;
 }
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60.0f;
+    return 100.0f;
 }
 
 /*

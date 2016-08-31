@@ -17,6 +17,7 @@
 +(NSMutableArray*)parseDreamsTypeWithDic:(NSDictionary *)dict{
     NSMutableArray * array = [NSMutableArray array];
     NSLog(@"解析-请求梦的类型返回的数据:%@",dict);
+    NSLog(@"=======%@",dict[@"reason"]);
     NSArray *tempArray = dict[@"result"];
     
     //判断返回的数据是否为空

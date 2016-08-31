@@ -14,6 +14,8 @@
 		8519593F1D74288200B9F56A /* DreamType.m in Sources */ = {isa = PBXBuildFile; fileRef = 8519593E1D74288200B9F56A /* DreamType.m */; };
 		851959841D75601000B9F56A /* DreamFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 851959831D75601000B9F56A /* DreamFlowLayout.m */; };
 		851959871D7563C000B9F56A /* HttpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 851959861D7563C000B9F56A /* HttpTools.m */; };
+		8584FE7D1D76812300B98663 /* DisplayDreamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8584FE7C1D76812300B98663 /* DisplayDreamCell.m */; };
+		8584FE7F1D7681B100B98663 /* DisplayDreamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8584FE7E1D7681B100B98663 /* DisplayDreamCell.xib */; };
 		85973CB71D6D49DD00DC74E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85973CB61D6D49DD00DC74E7 /* main.m */; };
 		85973CC01D6D49DD00DC74E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85973CBE1D6D49DD00DC74E7 /* Main.storyboard */; };
 		85973CC21D6D49DD00DC74E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85973CC11D6D49DD00DC74E7 /* Assets.xcassets */; };
@@ -57,6 +59,9 @@
 		851959831D75601000B9F56A /* DreamFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamFlowLayout.m; sourceTree = "<group>"; };
 		851959851D7563C000B9F56A /* HttpTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTools.h; sourceTree = "<group>"; };
 		851959861D7563C000B9F56A /* HttpTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTools.m; sourceTree = "<group>"; };
+		8584FE7B1D76812300B98663 /* DisplayDreamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayDreamCell.h; sourceTree = "<group>"; };
+		8584FE7C1D76812300B98663 /* DisplayDreamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayDreamCell.m; sourceTree = "<group>"; };
+		8584FE7E1D7681B100B98663 /* DisplayDreamCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayDreamCell.xib; sourceTree = "<group>"; };
 		85973CB21D6D49DD00DC74E7 /* Dreams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85973CB61D6D49DD00DC74E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85973CBF1D6D49DD00DC74E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -188,6 +193,9 @@
 				851959381D74268400B9F56A /* DreamCollectionViewCell.m */,
 				851959821D75601000B9F56A /* DreamFlowLayout.h */,
 				851959831D75601000B9F56A /* DreamFlowLayout.m */,
+				8584FE7B1D76812300B98663 /* DisplayDreamCell.h */,
+				8584FE7C1D76812300B98663 /* DisplayDreamCell.m */,
+				8584FE7E1D7681B100B98663 /* DisplayDreamCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -403,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8584FE7F1D7681B100B98663 /* DisplayDreamCell.xib in Resources */,
 				85973CC51D6D49DD00DC74E7 /* LaunchScreen.storyboard in Resources */,
 				85973CC21D6D49DD00DC74E7 /* Assets.xcassets in Resources */,
 				85973CC01D6D49DD00DC74E7 /* Main.storyboard in Resources */,
@@ -531,6 +540,7 @@
 				868955C81D75E8C900A3CF3D /* DreamInfo.m in Sources */,
 				85973CB71D6D49DD00DC74E7 /* main.m in Sources */,
 				868955CB1D75F0AC00A3CF3D /* DisplayDreamInfoTableViewController.m in Sources */,
+				8584FE7D1D76812300B98663 /* DisplayDreamCell.m in Sources */,
 				851959871D7563C000B9F56A /* HttpTools.m in Sources */,
 				8519593F1D74288200B9F56A /* DreamType.m in Sources */,
 				851959841D75601000B9F56A /* DreamFlowLayout.m in Sources */,
