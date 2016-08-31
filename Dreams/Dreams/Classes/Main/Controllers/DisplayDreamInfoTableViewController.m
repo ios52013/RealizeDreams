@@ -45,11 +45,12 @@ static NSString *const reuseIdentifier = @"Cell";
     
     //
     [self initData];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //设置tableview的背景图   还要让cell的背景透明  才可以显示图片
+
+    UIImageView *tableBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1.jpg"]];
+    [self.tableView setBackgroundView:tableBg];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,12 +74,16 @@ static NSString *const reuseIdentifier = @"Cell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     DisplayDreamCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
+    //让cell的背景透明
+    cell.backgroundColor = [UIColor clearColor];
     //
     DreamInfo *dreamInfo = _datasourceArr[indexPath.row];
     cell.DreamTitleLabel.text = dreamInfo.dreamTitle;
     cell.DreamDesTextView.text = dreamInfo.dreamDescripe;
-    //cell.DreamDesTextView.textColor = [UIColor colorWithRed:0.8 green:0.5 blue:0.6 alpha:1];
-    
+    cell.DreamDesTextView.textColor = [UIColor colorWithRed:0.3 green:0.6 blue:0.8 alpha:1];
+    //
+    cell.DreamTitleLabel.backgroundColor = [UIColor clearColor];
+    cell.DreamDesTextView.backgroundColor = [UIColor clearColor];
     
     return cell;
 }

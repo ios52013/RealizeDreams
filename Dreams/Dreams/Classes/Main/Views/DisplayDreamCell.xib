@@ -23,8 +23,8 @@
                         <color key="textColor" red="0.51479366333250998" green="0.35873821727421762" blue="0.96415314226519333" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text="梦的意义" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALv-lE-gEP">
-                        <rect key="frame" x="5" y="43" width="310" height="49"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="梦的意义" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALv-lE-gEP">
+                        <rect key="frame" x="5" y="45" width="310" height="49"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="textColor" red="0.96415314226519333" green="0.50319855529066337" blue="0.95602377101294633" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
