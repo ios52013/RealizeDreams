@@ -61,7 +61,7 @@
         <!--Search View Controller-->
         <scene sceneID="C3g-6K-CR7">
             <objects>
-                <viewController id="cVR-Yb-d4U" customClass="SearchViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchVC" id="cVR-Yb-d4U" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t2p-hm-Ngf"/>
                         <viewControllerLayoutGuide type="bottom" id="Ccg-xM-SIP"/>

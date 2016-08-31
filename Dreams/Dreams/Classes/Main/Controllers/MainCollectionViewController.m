@@ -9,6 +9,7 @@
 #import "MainCollectionViewController.h"
 #import "DreamCollectionViewCell.h"
 #import "HttpTools.h"
+#import "SearchViewController.h"
 
 
 @interface MainCollectionViewController ()
@@ -81,15 +82,18 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     DreamCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    
     cell.dreamType = _dreamsTypeArray[indexPath.row];
     
     return cell;
 }
 
+
 #pragma mark <UICollectionViewDelegate>
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    SearchViewController *searchVC = [self.storyboard instantiateViewControllerWithIdentifier:@"searchVC"];
+    [self.navigationController pushViewController:searchVC animated:YES];
+}
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
