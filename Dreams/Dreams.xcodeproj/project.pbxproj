@@ -25,6 +25,7 @@
 		8584FEB71D768E6000B98663 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8584FEAE1D768E6000B98663 /* 7.jpg */; };
 		8584FEB81D768E6000B98663 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8584FEAF1D768E6000B98663 /* 8.jpg */; };
 		8584FEB91D768E6000B98663 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8584FEB01D768E6000B98663 /* 9.jpg */; };
+		8584FEBC1D76D5A000B98663 /* DreamDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8584FEBB1D76D5A000B98663 /* DreamDetailTableViewController.m */; };
 		85973CB71D6D49DD00DC74E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85973CB61D6D49DD00DC74E7 /* main.m */; };
 		85973CC01D6D49DD00DC74E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85973CBE1D6D49DD00DC74E7 /* Main.storyboard */; };
 		85973CC21D6D49DD00DC74E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85973CC11D6D49DD00DC74E7 /* Assets.xcassets */; };
@@ -80,6 +81,8 @@
 		8584FEAE1D768E6000B98663 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
 		8584FEAF1D768E6000B98663 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		8584FEB01D768E6000B98663 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		8584FEBA1D76D5A000B98663 /* DreamDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DreamDetailTableViewController.h; sourceTree = "<group>"; };
+		8584FEBB1D76D5A000B98663 /* DreamDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DreamDetailTableViewController.m; sourceTree = "<group>"; };
 		85973CB21D6D49DD00DC74E7 /* Dreams.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dreams.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85973CB61D6D49DD00DC74E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85973CBF1D6D49DD00DC74E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 				868955C41D75E23200A3CF3D /* SearchViewController.m */,
 				868955C91D75F0AC00A3CF3D /* DisplayDreamInfoTableViewController.h */,
 				868955CA1D75F0AC00A3CF3D /* DisplayDreamInfoTableViewController.m */,
+				8584FEBA1D76D5A000B98663 /* DreamDetailTableViewController.h */,
+				8584FEBB1D76D5A000B98663 /* DreamDetailTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -572,6 +577,7 @@
 				851959361D74265600B9F56A /* MainCollectionViewController.m in Sources */,
 				8519592D1D74218A00B9F56A /* AppDelegate.m in Sources */,
 				85D1FC951D7593F700FB9A4F /* HYRParse.m in Sources */,
+				8584FEBC1D76D5A000B98663 /* DreamDetailTableViewController.m in Sources */,
 				868955C51D75E23200A3CF3D /* SearchViewController.m in Sources */,
 				868955C81D75E8C900A3CF3D /* DreamInfo.m in Sources */,
 				85973CB71D6D49DD00DC74E7 /* main.m in Sources */,

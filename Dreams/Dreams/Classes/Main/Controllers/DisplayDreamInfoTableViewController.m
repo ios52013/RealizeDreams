@@ -10,14 +10,30 @@
 #import "HttpTools.h"
 #import "DreamInfo.h"
 #import "DisplayDreamCell.h"
-
+#import "DreamDetailTableViewController.h"
 
 @interface DisplayDreamInfoTableViewController ()
 @property(nonatomic, strong)NSMutableArray *datasourceArr;
+@property(nonatomic, strong)UIButton *top_button;//悬浮按钮
 @end
 
 @implementation DisplayDreamInfoTableViewController
 
+//
+-(UIButton *)top_button{
+    if (_top_button == nil) {
+        _top_button = [[UIButton alloc] initWithFrame:CGRectMake(200, 300, 50, 50)];
+        _top_button.layer.borderColor = [UIColor cyanColor].CGColor;
+        _top_button.layer.borderWidth = 1.0;
+        _top_button.layer.cornerRadius = 45;
+        _top_button.backgroundColor = [UIColor lightGrayColor];
+        [_top_button setTitle:@"Back" forState:UIControlStateNormal];
+        
+    }
+    return _top_button;
+}
+
+//请求数据
 -(void)initData{
     [HttpTools requestDreamDetailInfoWithSomething:_searchText andSuccess:^(id obj) {
         //
@@ -34,7 +50,13 @@ static NSString *const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.view addSubview:self.top_button];
+    //把self.top_button 置顶
+    [self.view bringSubviewToFront:self.top_button];
+    
+    
     //tableView的可视范围占据整个父控件(或者屏幕)－－设置contentsize滚动范围
+    
     
     //所有的cell都可以被看到,也就是说tableView中的cell不会被导航栏,titleView以及TabBar所遮挡－－设置contentInset内边距
     self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
@@ -92,6 +114,19 @@ static NSString *const reuseIdentifier = @"Cell";
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100.0f;
 }
+
+#pragma mark - TableViewDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DreamDetailTableViewController *detailTVC = [[DreamDetailTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    detailTVC.dreamID = [_datasourceArr[indexPath.row] dreamID];
+    //模式
+    detailTVC.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    
+    [self presentViewController:detailTVC animated:YES completion:nil];
+    
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -10,6 +10,7 @@
 #import "HttpTools.h"
 #import <AFNetworking.h>
 #import "HYRParse.h"
+#import "DreamInfo.h"
 
 
 
@@ -125,10 +126,48 @@
     
     }];
     
-    
-
-
-    
 }
+
+// 根据ID查询解梦信息
++(void)requestDreamDetailByDreamID:(NSString*)did andSuccess:(MyCallBack)success andFail:(MyCallBack)fail{
+    //路径
+    NSString *urlString = [NSString stringWithFormat:@"%@queryid?",kHostUrl];
+    //参数
+    NSDictionary *parames = @{
+                              @"key":kAppKey,
+                              @"id":did
+                              };
+    
+    //创建请求对象
+    AFHTTPSessionManager *manager = [self manager];
+    //发起POST请求
+    [manager POST:urlString parameters:parames progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+        //// 这里可以获取到目前数据请求的进度
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //请求成功
+        
+        if (responseObject) {
+            //把请求回来的json字符串转换成字典
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+            NSLog(@"根据梦id解析梦:%@",dict);
+            //调用解析类来解析数据模型
+            DreamInfo *dreamDetail = [HYRParse parseDreamDetailWithDic:dict];
+            //
+            success(dreamDetail);
+            
+        }else{
+            success(@{@"msg": @"暂无数据~"});
+        }
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //请求失败
+        NSString *reson = [error localizedDescription];
+        fail(reson);//把请求错误的信息返回出去
+        
+    }];
+}
+
 
 @end

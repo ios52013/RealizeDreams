@@ -13,7 +13,7 @@
 @property (nonatomic, copy) NSString *dreamID;
 @property (nonatomic, copy) NSString *dreamTitle;//梦的标题
 @property (nonatomic, copy) NSString *dreamDescripe;//描述
-@property (nonatomic, strong) NSArray *list;
+@property (nonatomic, strong) NSMutableArray *lists;
 
 
 @end

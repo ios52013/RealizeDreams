@@ -62,7 +62,8 @@
                  //模型层的属性名 : 后台返回的名字
                  @"dreamID": @"id",
                  @"dreamTitle": @"title",
-                 @"dreamDescripe": @"des"
+                 @"dreamDescripe": @"des",
+                 @"lists": @"list"
                  
                  };
     }];
@@ -74,5 +75,28 @@
 }
 
 
+
+//根据梦的id  解 梦的详情
++(DreamInfo*)parseDreamDetailWithDic:(NSDictionary *)dict{
+    
+    NSDictionary *tempDict = dict[@"result"];
+    
+    //判断返回的数据是否为空
+    if ([tempDict isKindOfClass:[NSNull class]]) {
+        return nil;
+    }
+    
+    DreamInfo *dreamDetail = [[DreamInfo alloc] init];
+    dreamDetail.dreamID = tempDict[@"id"];
+    dreamDetail.dreamTitle = tempDict[@"title"];
+    dreamDetail.dreamDescripe = tempDict[@"des"];
+    dreamDetail.lists = tempDict[@"list"];
+    
+    
+    
+    
+    
+    return dreamDetail;
+}
 
 @end

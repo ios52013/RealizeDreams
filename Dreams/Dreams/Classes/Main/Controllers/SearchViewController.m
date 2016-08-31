@@ -42,12 +42,12 @@
 //
 //}
 
-
+//跳转界面
 - (IBAction)SearchDream:(UIButton *)sender {
     
     DisplayDreamInfoTableViewController *dreamInfoTVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DisplayDreamInfoTVC"];
     dreamInfoTVC.searchText = _searchTF.text;
-    dreamInfoTVC.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+    dreamInfoTVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
     [self presentViewController:dreamInfoTVC animated:YES completion:nil];
     

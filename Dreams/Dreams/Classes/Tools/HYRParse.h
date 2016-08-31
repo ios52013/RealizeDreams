@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DreamInfo.h"
 
 @interface HYRParse : NSObject
 
@@ -16,5 +17,7 @@
 //根据梦中的事物  解 梦的详情
 +(NSMutableArray*)parseDreamDetailInfoWithDic:(NSDictionary *)dict;
 
+//根据梦的id  解 梦的详情
++(DreamInfo*)parseDreamDetailWithDic:(NSDictionary *)dict;
 
 @end
