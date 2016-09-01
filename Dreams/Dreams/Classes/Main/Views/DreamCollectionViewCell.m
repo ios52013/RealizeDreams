@@ -40,14 +40,15 @@
 //创建界面
 -(void)createUI{
     self.backgroundColor = [UIColor magentaColor];
+   
     //
     self.layer.borderWidth = 2;
     self.layer.borderColor = [UIColor whiteColor].CGColor;
     //
-    _typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, self.frame.size.height - 55, self.frame.size.width-10, 50)];
+    _typeLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, self.frame.size.height/2, self.frame.size.width-10, 50)];
     _typeLabel.textAlignment = NSTextAlignmentCenter;
     _typeLabel.font = [UIFont systemFontOfSize:28];
-    _typeLabel.backgroundColor = [UIColor lightGrayColor];
+    _typeLabel.backgroundColor = [UIColor clearColor];
     
     [self.contentView addSubview:_typeLabel];
 }

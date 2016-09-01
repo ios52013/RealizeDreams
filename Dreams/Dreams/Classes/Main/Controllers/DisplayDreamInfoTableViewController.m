@@ -19,7 +19,7 @@
 
 @implementation DisplayDreamInfoTableViewController
 
-//
+//悬浮按钮
 -(UIButton *)top_button{
     if (_top_button == nil) {
         _top_button = [[UIButton alloc] initWithFrame:CGRectMake(260, 400, 60, 60)];
