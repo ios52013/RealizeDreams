@@ -22,16 +22,26 @@
 //
 -(UIButton *)top_button{
     if (_top_button == nil) {
-        _top_button = [[UIButton alloc] initWithFrame:CGRectMake(200, 300, 50, 50)];
+        _top_button = [[UIButton alloc] initWithFrame:CGRectMake(260, 400, 60, 60)];
         _top_button.layer.borderColor = [UIColor cyanColor].CGColor;
         _top_button.layer.borderWidth = 1.0;
-        _top_button.layer.cornerRadius = 45;
-        _top_button.backgroundColor = [UIColor lightGrayColor];
+        _top_button.layer.cornerRadius = 30;
+        _top_button.backgroundColor = [UIColor purpleColor];
+        _top_button.alpha = 0.5;
         [_top_button setTitle:@"Back" forState:UIControlStateNormal];
+        [_top_button addTarget:self action:@selector(topBtnAction) forControlEvents:UIControlEventTouchUpInside];
         
     }
     return _top_button;
 }
+
+//悬浮按钮的事件方法
+-(void)topBtnAction{
+    NSLog(@"返回");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 //请求数据
 -(void)initData{
@@ -52,7 +62,7 @@ static NSString *const reuseIdentifier = @"Cell";
     
     [self.view addSubview:self.top_button];
     //把self.top_button 置顶
-    [self.view bringSubviewToFront:self.top_button];
+    //[self.view bringSubviewToFront:self.top_button];
     
     
     //tableView的可视范围占据整个父控件(或者屏幕)－－设置contentsize滚动范围
@@ -73,6 +83,13 @@ static NSString *const reuseIdentifier = @"Cell";
     UIImageView *tableBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1.jpg"]];
     [self.tableView setBackgroundView:tableBg];
     
+}
+
+
+#pragma mark - 实现了按钮 可以悬浮在列表上面
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    _top_button.frame = CGRectMake(260, self.tableView.contentOffset.y+400, 60, 60);
+    [self.view bringSubviewToFront:_top_button];
 }
 
 - (void)didReceiveMemoryWarning {
