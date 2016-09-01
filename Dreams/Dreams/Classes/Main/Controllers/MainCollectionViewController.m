@@ -42,7 +42,13 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //
+    //修改导航栏前景颜色
+    self.navigationController.navigationBar.barTintColor = [UIColor magentaColor];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    //[self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor, nil]];
+    
+    //界面的背景颜色
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
     //初始化数据  请求数据
