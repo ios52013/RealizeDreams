@@ -14,7 +14,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <collectionViewLayout key="collectionViewLayout" id="jsx-Cb-VLd" customClass="DreamFlowLayout"/>
-                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5.jpg" id="Dtb-LZ-epq">
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5.jpg" id="Dtb-LZ-epq">
                             <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -35,7 +35,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="梦的类型" id="PN5-bx-khZ">
-                        <barButtonItem key="rightBarButtonItem" title="搜索" id="QtZ-Yo-UQ1">
+                        <barButtonItem key="rightBarButtonItem" image="搜索" id="QtZ-Yo-UQ1">
                             <connections>
                                 <segue destination="cVR-Yb-d4U" kind="show" id="VXB-XV-svm"/>
                             </connections>
@@ -166,5 +166,6 @@
     <resources>
         <image name="2.jpg" width="500" height="281"/>
         <image name="5.jpg" width="800" height="1091"/>
+        <image name="搜索" width="44" height="38"/>
     </resources>
 </document>

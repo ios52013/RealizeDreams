@@ -81,6 +81,8 @@ static NSString *const reuseIdentifier = @"Cell";
     //设置tableview的背景图   还要让cell的背景透明  才可以显示图片
 
     UIImageView *tableBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1.jpg"]];
+    //图片显示的模式
+    tableBg.contentMode = UIViewContentModeScaleAspectFill;
     [self.tableView setBackgroundView:tableBg];
     
 }

@@ -47,6 +47,8 @@ static NSString *const reuseIdentifier = @"Cell";
     
     //设置列表的背景图片
     UIImageView *tableBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"9.jpg"]];
+    //图片显示的模式
+    tableBg.contentMode = UIViewContentModeScaleAspectFill;
     [self.tableView setBackgroundView:tableBg];
     
 }
